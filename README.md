@@ -1,2 +1,2 @@
-# algorithms
-Examples of algorithms from undergraduate and  graduate course
+# Algorithms
+Examples of algorithms from undergraduate and graduate courses.
