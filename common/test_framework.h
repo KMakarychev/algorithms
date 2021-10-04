@@ -603,7 +603,7 @@ namespace TestFramework
    void StringSegment::CopyTo(std::string& dest) const
    {
       dest.assign(str, iBegin, iEnd - iBegin);
-   };
+   }
 
    bool StringSegment::CopyTo(char* buffer, size_t buffer_size) const
    {
@@ -867,7 +867,7 @@ namespace TestFramework
       }
 
       PostParse();
-   };
+   }
 
    void AbstractLineParser::CheckCondition(bool bCondition, const char* error)
    {
@@ -893,7 +893,7 @@ namespace TestFramework
             exit(1);
          }
       }
-   };
+   }
 
    void StringToLowerCase(std::string& str)
    {
@@ -1110,7 +1110,7 @@ namespace TestFramework
       assert(pHeader->RowCount() > 0);
       assert(pTable != nullptr);
       assert(!pTable->IsFixedSize());
-   };
+   }
 
    void BasicYamlParser::SetHeaderAdapter(ITable* newAdapter)
    {
