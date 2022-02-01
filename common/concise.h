@@ -1,5 +1,6 @@
 #ifndef _concise_h_
 #define _concise_h_
+#include <algorithm>
 
 namespace alg{
 //////////////
@@ -9,7 +10,7 @@ namespace alg{
 // instead of these functions.
 
 //sort data in increasing order
-template<class T, class Compare>
+template<class T>
 void sort(T& data)
 {
    std::sort(data.begin(), data.end());
@@ -74,6 +75,19 @@ void sort_by(T& data, bool bAscending = true)
    else
    {
       alg::sort(data, [](auto a, auto b){return (a.*Field > b.*Field);});
+   }
+}
+
+template<auto Field, class Iter>
+void sort_by(Iter begin, Iter end, bool bAscending = true)
+{  
+   if (bAscending)
+   {
+      std::sort(begin, end, [](auto a, auto b){return (a.*Field < b.*Field);});
+   }
+   else
+   {
+      std::sort(begin, end, [](auto a, auto b){return (a.*Field > b.*Field);});
    }
 }
 
