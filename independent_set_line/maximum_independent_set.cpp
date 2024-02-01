@@ -5,8 +5,8 @@
 
 
 // To compile, use one of the following commands:
-//  1. g++ maximum_independent_set.cpp -o maximum_independent_set
-//  2. clang++ maximum_independent_set.cpp -o maximum_independent_set
+//  1. g++ maximum_independent_set.cpp -O3 -o maximum_independent_set
+//  2. clang++ maximum_independent_set.cpp -O3 -o maximum_independent_set
 //  3. cl maximum_independent_set.cpp
 
 
@@ -99,10 +99,8 @@ int FindIndependentSetRecursively (const std::vector<int>& weights,
    {
       result = std::max(weights[0], weights[1]);
    }
-   else 
+   else //Main case, k >= 2.
    {
-      //Main case, k >= 2.
-
       //Option A - we do not include k in the independent set;
       //Option B - we include k in the independent set.
       int optionA = FindIndependentSetRecursively(weights, dpTable, k - 1);

@@ -5,7 +5,7 @@
 namespace alg{
 //////////////
 
-// Several convinient functions for sorting data.
+// Several convenient functions for sorting data.
 // Staring with C++20, you can use std::ranges::sort
 // instead of these functions.
 
