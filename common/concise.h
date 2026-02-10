@@ -148,7 +148,7 @@ private:
 ///////////////////////////////////////////////////////////////////////////////
 
 template<typename T>
-auto create_table(std::size_t size, const T& value)
+auto create_table(std::size_t size, T value)
 {
     return std::vector<T>(size, value);
 }
@@ -157,7 +157,7 @@ template<typename... Args>
 auto create_table(std::size_t size, Args&&... args)
 {
     auto slice = create_table(std::forward<Args>(args)...);
-    return std::vector<decltype(slice)>(size, slice);
+    return std::vector<decltype(slice)>(size, std::move(slice));
 }
 
 } // namespace alg
