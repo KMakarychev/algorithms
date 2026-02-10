@@ -1,4 +1,4 @@
-<img src="illustration1.png" alt="Chessboard with prizes" width="800">
+<img src="https://github.com/KMakarychev/algorithms/blob/main/prize_collector/illustration.png" alt="Chessboard with prizes" width="800">
 
 **Problem.**  
 Consider an $n \times n$ chessboard in which each square with coordinates $(i,j)$ contains a non-negative prize of $a(i,j)$ dollars. A king starts on the bottom-left square $(1,1)$ and must reach the top-right square $(n,n)$. At each step, the king may move one square up, one square to the right, or one square diagonally up and to the right. The king collects the prize from every square it visits, including both the starting and ending squares. Design an algorithm that computes the maximum total prize the king can collect along any valid path from $(1,1)$ to $(n,n)$.
@@ -30,5 +30,11 @@ since this is the last square on the king’s path.
 The answer to the original question is $OPT(1,1)$, which is the maximum total prize the king can collect by starting at square $(1,1)$.
 
 **Implementation.**  
-We compute the recurrence relation using a top-down approach. To this end, we create a DP table `opt` and evaluate its entries using the helper function `compute_opt(i,j,opt)`. The source code in Python and C++ is available here: [Python](link) and [C++](link).
+We compute the recurrence relation using a top-down approach. To this end, we create a DP table `opt` and evaluate its entries using the helper function `compute_opt(i,j,opt)`. 
+
+The source code in Python and C++ is available here: 
+
+[Python](https://github.com/KMakarychev/algorithms/blob/main/prize_collector/find_best_path.py) 
+
+[C++](https://github.com/KMakarychev/algorithms/blob/main/prize_collector/prize_collector.cpp).
 
