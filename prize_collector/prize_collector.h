@@ -1,0 +1,1 @@
+int FindMaxPrizeCollectingPath (const std::vector<std::vector<int>>& prizeBoard);
